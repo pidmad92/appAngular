@@ -25,9 +25,13 @@ export class FrutaComponent{
 		this.arrayStringEjemplo = ['String1', 'String2'];
 		this.arrayAnyEjemplo = ['String1', 2];
 		this.booleanEjemplo = true;
+	}
 
+	ngOnInit() {
 		this.funcionEjemplo();
 		this.funcionEjemplo2(100);
+		alert('Numero Ejemplo ' + this.numeroEjemplo);
+		console.log(this.stringEjemplo + ' ' + this.numeroEjemplo); 
 	}
 
 	funcionEjemplo(){
@@ -37,6 +41,5 @@ export class FrutaComponent{
 
 	funcionEjemplo2(numeroEjemplo) {
 		this.numeroEjemplo = numeroEjemplo;
-		alert('Numero Ejemplo ' + this.numeroEjemplo);
 	}
 }

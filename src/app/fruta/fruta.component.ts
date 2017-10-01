@@ -32,6 +32,18 @@ export class FrutaComponent{
 		this.funcionEjemplo2(100);
 		alert('Numero Ejemplo ' + this.numeroEjemplo);
 		console.log(this.stringEjemplo + ' ' + this.numeroEjemplo); 
+		
+		var uno = 8;
+		var dos = 15;
+
+		if( uno === 8){
+			let uno = 3
+			var dos = 88
+
+			console.log("Dentro del IF: " + uno + " " + dos);
+		}
+
+		console.log("Fuera del IF: " + uno + " " + dos);
 	}
 
 	funcionEjemplo(){

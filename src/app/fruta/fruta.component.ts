@@ -27,10 +27,16 @@ export class FrutaComponent{
 		this.booleanEjemplo = true;
 
 		this.funcionEjemplo();
+		this.funcionEjemplo2(100);
 	}
 
 	funcionEjemplo(){
 		this.nombre_componente = 'Refruta xD';
-		alert('Hola Mundo ' + this.nombre_componente);
+		alert('Nombre Componente ' + this.nombre_componente);
+	}
+
+	funcionEjemplo2(numeroEjemplo) {
+		this.numeroEjemplo = numeroEjemplo;
+		alert('Numero Ejemplo ' + this.numeroEjemplo);
 	}
 }

@@ -4,6 +4,7 @@
 </h1>
 <strong>Empleado Estrella</strong>
 <br/>
+<hr/>
 <br/>
 <div *ngIf="trabajadorExterno == true">
 	<button (click) = "cambiarExterno(false)" >Mostrar Trabajador</button>
@@ -26,6 +27,7 @@
 	</ul>
 </div>
 <br/>
+<hr/>
 <br/>
 <h3>Listado de Trabajadores</h3>
 <ul>
@@ -39,4 +41,15 @@
 			<li *ngIf="empleado.contratado == false">No está contratado</li>
 		</ul>
 	</li>
+</ul>
+<br/>
+<hr/>
+<br/>
+<h3>Colores Switch</h3>
+<!-- El hecho que utilice corchetes significa que es una directiva con Binding, porque conecta con una propiedad-->
+<ul [ngSwitch]="color">
+	<!--Como es de tipo string debe ir tambien entre comillas simples-->
+	<li *ngSwitchCase="'red'" [ngStyle]="{'background': color,'color': 'white', 'padding': '20px'}">Es de color Rojo</li>
+	<li *ngSwitchCase="'green'" [ngStyle]="{'background': color,'color': 'white', 'padding': '20px'}">Es de color Verde</li>
+	<li *ngSwitchCase="'blue'" [ngStyle]="{'background': color,'color': 'white', 'padding': '20px'}">Es de color Azul</li>
 </ul>

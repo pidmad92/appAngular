@@ -13,6 +13,7 @@ export class EmpleadoComponent{
 	public titulo = 'Componente Empleado';
 	public empleado:Empleado;
 	public trabajadores:Array<Empleado>;
+	public trabajadorExterno:boolean;
 
 	constructor(){
 		this.empleado = new Empleado('Pierre David Maldonado Diaz', 25, 'Ingeniero Mecatrónico', true);
@@ -21,6 +22,7 @@ export class EmpleadoComponent{
 			new Empleado('Marco Antonio Vilchez Diaz', 41, 'Diseñador Web', false),
 			new Empleado('Edgar Maldonado Morales', 55, 'Tecnico', true)
 		];
+		this.trabajadorExterno = false;
 	}
 
 	ngOnInit() {
@@ -29,4 +31,8 @@ export class EmpleadoComponent{
 		console.log(this.empleado);
 	}
 	
+	cambiarExterno(valor){
+		this.trabajadorExterno = valor;
+	}
+
 }

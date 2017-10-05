@@ -53,3 +53,22 @@
 	<li *ngSwitchCase="'green'" [ngStyle]="{'background': color,'color': 'white', 'padding': '20px'}">Es de color Verde</li>
 	<li *ngSwitchCase="'blue'" [ngStyle]="{'background': color,'color': 'white', 'padding': '20px'}">Es de color Azul</li>
 </ul>
+<br/>
+<hr/>
+<br/>
+<h3>Selector de colores:</h3>
+<button (click)="logColorSeleccionado()">Mostrar Log</button>
+<input type="text" [(ngModel)]="colorSeleccionado"/>
+<!--[(ngModel)] es un twoWaydatabinding permite cambiar los valores en tiempo de ejecucion-->
+<pre [style.border]="colorSeleccionado == 'red' ? '5px solid black' : '1px solid green'">
+	<strong>Color elegido:</strong>
+	{{colorSeleccionado}}
+</pre>
+<div [ngStyle]="{
+	'background': colorSeleccionado,
+	'width': '200px',
+	'height': '200px',
+	'float': 'right',
+	'margin-right': '69%'
+	}"></div>
+<div style="clear:both"></div>

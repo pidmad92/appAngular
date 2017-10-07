@@ -13,6 +13,8 @@ const appRoutes: Routes = [
     { path: 'empleado', component: EmpleadoComponent},
     { path: 'fruta', component: FrutaComponent},
     { path: 'contacto', component: ContactoComponent },
+    //Routing con parametros asi acepta parametros
+    { path: 'contacto/:page', component: ContactoComponent },
     { path: '**', component: HomeComponent},
 ];
 

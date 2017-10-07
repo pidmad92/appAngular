@@ -14,8 +14,8 @@ export class EmpleadoComponent{
 	public empleado:Empleado;
 	public trabajadores:Array<Empleado>;
 	public trabajadorExterno:boolean;
-	public color:String;
-	public colorSeleccionado: String;
+	public color:string;
+	public colorSeleccionado: string;
 
 	constructor(){
 		this.empleado = new Empleado('Pierre David Maldonado Diaz', 25, 'Ingeniero Mecatrónico', true);

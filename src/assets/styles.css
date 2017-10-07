@@ -4,3 +4,6 @@
 .fondoVerde{
     background: lightgreen !important;
 }
+.activado{
+    background: yellow;
+}

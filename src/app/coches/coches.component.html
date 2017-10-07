@@ -8,6 +8,7 @@
     }
     div{
         float: left;
+        width: 300px;
     }
     .listado{
         margin-left: 30px;
@@ -41,4 +42,18 @@
             {{auto.nombre}} - {{auto.caballaje}} - {{auto.color}}
         </li>
     </ul>
+</div>
+
+<div class="listado">
+    <h4>Listado de Articulos</h4>
+    <ul *ngIf="articulos">
+        <li *ngFor="let articulo of articulos">
+            {{articulo.userId}}
+            <br>
+            {{articulo.id}}<br>{{articulo.title}}<br>{{articulo.body}}
+            <br>
+            <br>
+        </li>
+    </ul>
+    <span *ngIf="!articulos">Cargando listado...</span>
 </div>
